@@ -1,0 +1,30 @@
+spring:
+  thymeleaf:
+    mode: HTML
+  profiles:
+    active: dev
+  messages:
+    basename: i18n/messages
+
+  datasource:
+    driver-calss-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springbootblog?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+logging:
+  level:
+    root: info
+    com.wang.springboot: debug
+  file: log/blog.log
+
+
+#配置评论的统一头像
+comment.avatar: /images/avatar.png
